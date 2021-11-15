@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "7UsaTGG7hMiyZuMDnzVZsVuO1R7Tl3vsn+GSMwI//qbqoiJxzCgl64SEyruQn/kAwT51nWftRJ2CD5nR9Bilaw==",
+  "dgSpecHash": "fTe5GXpb6eR6Q4z7ullIg6SsTWcetQB/Fnxo+6/+e5XmkZITiUo0DURwabM0zO2BU6Xp7WG6OIX1mw8+T9Us9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Services\\WalletApi.Services.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\nlog\\4.7.11\\nlog.4.7.11.nupkg.sha512",
+    "C:\\Users\\ghidyon\\.nuget\\packages\\nlog.extensions.logging\\1.7.4\\nlog.extensions.logging.1.7.4.nupkg.sha512"
+  ],
   "logs": []
 }
