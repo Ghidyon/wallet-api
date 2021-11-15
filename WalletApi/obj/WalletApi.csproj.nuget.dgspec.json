@@ -112,6 +112,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.11, )"
@@ -167,7 +171,14 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Data\\WalletApi.Data.csproj": {
+                "projectPath": "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Data\\WalletApi.Data.csproj"
+              },
+              "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Models\\WalletApi.Models.csproj": {
+                "projectPath": "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Models\\WalletApi.Models.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -180,6 +191,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[1.7.4, )"
