@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace WalletApi.Services.Interfaces
 {
-    class ILoggerService
+    public interface ILoggerService
     {
+        void LogInfo(string message);
+        void LogWarn(string message);
+        void LogDebug(string message);
+        void LogError(string message);
     }
 }

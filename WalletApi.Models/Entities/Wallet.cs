@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
+﻿using System;
 using WalletApi.Models.Interfaces;
 
 namespace WalletApi.Models.Entities

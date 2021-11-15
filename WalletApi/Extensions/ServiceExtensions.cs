@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -6,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WalletApi.Models.Entities;
+using WalletApi.Services.Implementations;
+using WalletApi.Services.Interfaces;
 
 namespace WalletApi.Extensions
 {
@@ -27,11 +30,10 @@ namespace WalletApi.Extensions
                     options.UseSqlServer(configuration.GetConnectionString("WalletConnection"),
                         b => b.MigrationsAssembly("WalletApi"));
                 });
-        }
 
         public static IServiceCollection ConfigureIdentity(this IServiceCollection services)
         {
-            services.AddIdentity<User, Role>()
+            services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<IdentityContext>()
                 .AddDefaultTokenProviders();
 
@@ -47,5 +49,8 @@ namespace WalletApi.Extensions
 
             return services;
         }
+
+        public static void ConfigureLoggerService(this IServiceCollection services) =>
+            services.AddScoped<ILoggerService, LoggerService>();
     }
 }
