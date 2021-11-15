@@ -1679,6 +1679,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "WalletApi.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.11",
+          "WalletApi.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WalletApi.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WalletApi.Data.dll": {}
+        }
+      },
       "WalletApi.Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6233,6 +6247,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "WalletApi.Data/1.0.0": {
+      "type": "project",
+      "path": "../WalletApi.Data/WalletApi.Data.csproj",
+      "msbuildProject": "../WalletApi.Data/WalletApi.Data.csproj"
+    },
     "WalletApi.Models/1.0.0": {
       "type": "project",
       "path": "../WalletApi.Models/WalletApi.Models.csproj",
@@ -6252,6 +6271,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.11",
       "NLog >= 4.7.12",
       "Swashbuckle.AspNetCore >= 5.6.3",
+      "WalletApi.Data >= 1.0.0",
       "WalletApi.Models >= 1.0.0",
       "WalletApi.Services >= 1.0.0"
     ]
@@ -6288,6 +6308,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Data\\WalletApi.Data.csproj": {
+              "projectPath": "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Data\\WalletApi.Data.csproj"
+            },
             "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Models\\WalletApi.Models.csproj": {
               "projectPath": "C:\\Users\\ghidyon\\source\\repos\\WalletApi\\WalletApi.Models\\WalletApi.Models.csproj"
             },

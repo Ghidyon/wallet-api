@@ -6,6 +6,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WalletApi.Data.Implementations;
+using WalletApi.Data.Interfaces;
 using WalletApi.Models.Entities;
 using WalletApi.Services.Implementations;
 using WalletApi.Services.Interfaces;
@@ -52,5 +54,16 @@ namespace WalletApi.Extensions
 
         public static void ConfigureLoggerService(this IServiceCollection services) =>
             services.AddScoped<ILoggerService, LoggerService>();
+
+        public static IServiceCollection ConfigureServices(this IServiceCollection services)
+        {
+            services.AddTransient<IUnitOfWork, UnitOfWork<IdentityContext>>();
+            services.AddTransient<IServiceFactory, ServiceFactory>();
+            services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IWalletService, WalletService>();
+            services.AddTransient<ITransactionService, TransactionService>();
+
+            return services;
+        }
     }
 }

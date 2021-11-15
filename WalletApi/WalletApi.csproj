@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WalletApi.Data\WalletApi.Data.csproj" />
     <ProjectReference Include="..\WalletApi.Models\WalletApi.Models.csproj" />
     <ProjectReference Include="..\WalletApi.Services\WalletApi.Services.csproj" />
   </ItemGroup>

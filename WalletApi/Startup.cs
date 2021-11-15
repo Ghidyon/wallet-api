@@ -31,6 +31,7 @@ namespace WalletApi
             services.ConfigureLoggerService();
             services.ConfigureDbContext(Configuration);
             services.ConfigureIdentity();
+            services.ConfigureServices();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
