@@ -33,6 +33,9 @@ namespace WalletApi
             services.ConfigureIdentity();
             services.ConfigureServices();
 
+            // To access automapper from any assembly.
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

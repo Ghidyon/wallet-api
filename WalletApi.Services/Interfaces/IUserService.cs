@@ -9,6 +9,6 @@ namespace WalletApi.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<(IdentityResult, User)> CreateUserAsync(UserDto userDto);
+        Task<UserCreationResult> CreateUserAsync(UserDto userDto);
     }
 }

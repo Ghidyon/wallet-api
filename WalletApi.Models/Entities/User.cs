@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 using WalletApi.Models.Interfaces;
 
 namespace WalletApi.Models.Entities
@@ -11,6 +12,7 @@ namespace WalletApi.Models.Entities
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }
+
 
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }

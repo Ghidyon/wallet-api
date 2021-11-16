@@ -7,5 +7,6 @@ namespace WalletApi.Models.Dtos
     {
         public IdentityResult Result { get; set; }
         public User User { get; set; }
+        public Wallet Wallet { get; set; }
     }
 }

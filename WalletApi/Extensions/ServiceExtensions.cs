@@ -41,7 +41,6 @@ namespace WalletApi.Extensions
 
             services.Configure<IdentityOptions>(options =>
             {
-                options.User.RequireUniqueEmail = true;
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
                 options.Password.RequireNonAlphanumeric = true;

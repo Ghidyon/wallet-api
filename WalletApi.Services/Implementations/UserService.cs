@@ -16,16 +16,19 @@ namespace WalletApi.Services.Implementations
     public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IServiceFactory _serviceFactory;
         private readonly UserManager<User> _userManager;
         private readonly IMapper _mapper;
         private readonly ILoggerService _loggerService;
 
         public UserService(IUnitOfWork unitOfWork,
+            IServiceFactory serviceFactory,
             UserManager<User> userManager,
             IMapper mapper,
             ILoggerService loggerService)
         {
             _unitOfWork = unitOfWork;
+            _serviceFactory = serviceFactory;
             _userManager = userManager;
             _mapper = mapper;
             _loggerService = loggerService;
@@ -35,11 +38,23 @@ namespace WalletApi.Services.Implementations
         {
             var user = _mapper.Map<User>(userDto);
 
-            var createdUserResult = await _userManager.CreateAsync(user, userDto.Password);
+            if (user != null) user.EmailConfirmed = true;
 
+            var createdUserResult = await _userManager.CreateAsync(user, userDto.Password);
+            
+            IWalletService walletService = _serviceFactory.GetService<IWalletService>();
+
+            var wallet = new Wallet
+            {
+                UserId = user.Id,
+            };
+
+            var createdWallet = await walletService.CreateWallet(wallet);
+            
             return new UserCreationResult {
                 Result = createdUserResult,
-                User = user
+                User = user,
+                Wallet = createdWallet
             };
         }
     }

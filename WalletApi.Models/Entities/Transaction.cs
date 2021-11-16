@@ -16,7 +16,8 @@ namespace WalletApi.Models.Entities
 
         [ForeignKey("Wallet")]
         public Guid WalletId { get; set; }
-        
+
+        [Column(TypeName = "decimal(38,2)")]
         public decimal Amount { get; set; }
         
         public DateTime CreatedAt { get; set; }

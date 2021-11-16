@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
+using WalletApi.Models.Entities;
 
 namespace WalletApi.Services.Interfaces
 {
     public interface IWalletService
     {
+        Task<Wallet> CreateWallet(Wallet wallet);
     }
 }

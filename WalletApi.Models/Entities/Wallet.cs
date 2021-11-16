@@ -11,16 +11,15 @@ namespace WalletApi.Models.Entities
             CreatedAt = DateTime.Now;
             UpdatedAt = DateTime.Now;
         }
-
+        
+        [Column("WalletId")]
         public Guid Id { get; set; }
 
-        [ForeignKey(nameof(User))]
+        [ForeignKey("User")]
         public string UserId { get; set; }
-        
+
         public virtual User User { get; set; }
-        
-        public Guid WalletId { get; set; }
-        
+
         [Column(TypeName = "decimal(38,2)")]
         public decimal Balance { get; set; }
         
